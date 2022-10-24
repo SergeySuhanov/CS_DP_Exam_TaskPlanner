@@ -18,6 +18,11 @@ namespace CS_DP_Exam_TaskPlanner
             ToDoEntry newEntry = new ToDoEntry();
             tagDecorator.Print(newEntry.Tag);
         }
+
+        public void Search()
+        {
+            editor.LoadList();
+        }
     }
 
     class ToDoEntry
