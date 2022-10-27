@@ -13,7 +13,7 @@ namespace CS_DP_Exam_TaskPlanner
         string Path;
         public XMLParser()
         {
-            Path = "C:\\DP_Exam_TakPlanner\\";
+            Path = "C:\\DP_Exam_TakPlanner";  // Папка для хранения файла
         }
 
         public List<ToDoEntry> LoadList()

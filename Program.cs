@@ -13,7 +13,7 @@ namespace CS_DP_Exam_TaskPlanner
         static void Main(string[] args)
         {
             TaskPlanner planner = new TaskPlanner();
-            planner.AddEntry();
+            //planner.AddEntry();
             planner.ShowPlans();
 
 

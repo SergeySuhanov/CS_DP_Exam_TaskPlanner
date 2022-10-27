@@ -8,7 +8,7 @@ namespace CS_DP_Exam_TaskPlanner
 {
     class TagDecorator
     {
-        public void Print(ToDoEntry toDoEntry)
+        public void Print(ToDoEntry toDoEntry)  // Отображение дела на консоли в цветном варианте в зависимости от тэга
         {
             switch (toDoEntry.Tag)
             {
