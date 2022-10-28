@@ -30,32 +30,13 @@ namespace CS_DP_Exam_TaskPlanner
                     break;
             }
 
+            // Неготово отображение с переносом длинного текста и цветным прямоугольником
             Console.WriteLine(toDoEntry.Text);
             Console.WriteLine(toDoEntry.Priority);
             Console.WriteLine(toDoEntry.DoBefore);
             Console.WriteLine(toDoEntry.Tag);
             Console.WriteLine("\n");
             Console.ResetColor();
-
-
-            /*foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
-            {
-                Console.ForegroundColor = color;
-                //Console.Clear();
-                Console.WriteLine($"Foreground color set to {color}");
-            }
-            Console.WriteLine("=====================================");
-            Console.ForegroundColor = ConsoleColor.White;
-            // Let's go through all Console colors and set them as background  
-            foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
-            {
-                Console.BackgroundColor = color;
-                Console.WriteLine($"Background color set to {color}");
-            }
-            Console.WriteLine("=====================================");
-            // Restore original colors  
-            Console.ResetColor();
-            Console.ReadKey();*/
         }
     }
 }
