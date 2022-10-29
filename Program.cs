@@ -14,7 +14,8 @@ namespace CS_DP_Exam_TaskPlanner
         {
             TaskPlanner planner = new TaskPlanner();
             //planner.AddEntry();
-            planner.ShowPlans();
+            //planner.ShowPlans();
+            planner.SearchEntry();
 
 
             Console.ReadLine();

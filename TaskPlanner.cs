@@ -75,5 +75,67 @@ namespace CS_DP_Exam_TaskPlanner
             toDoList.RemoveAt(index);
             loader.SaveList(toDoList);
         }
+
+        public void SearchEntry()
+        {
+            toDoList = loader.LoadList();
+            List<ToDoEntry> foundList = new List<ToDoEntry>();
+
+            Console.WriteLine("Выберите категорию поиска:");
+            Console.WriteLine("1 - по дате");
+            Console.WriteLine("2 - по тэгу");
+            Console.WriteLine("3 - по приоритету");
+            int catChoice = Int32.Parse(Console.ReadLine());
+
+            
+            switch (catChoice)
+            {
+                case 1:
+                    Console.WriteLine("Не дописана реализация.");
+                    break;
+                case 2:
+                    Console.WriteLine("Выберите тэг:");
+                    Console.WriteLine("1 - Работа");
+                    Console.WriteLine("2 - Дом");
+                    Console.WriteLine("3 - Хобби");
+                    Console.WriteLine("4 - Без тэга");
+                    int tagChoice = Int32.Parse(Console.ReadLine());
+                    string askedTag = "";
+                    switch (tagChoice)
+                    {
+                        case 1:
+                            askedTag = "Work";
+                            break;
+                        case 2:
+                            askedTag = "Home";
+                            break;
+                        case 3:
+                            askedTag = "Hobby";
+                            break;
+                        default:
+                            askedTag = "Undefined tag";
+                            break;
+                    }
+                    foreach (ToDoEntry entry in toDoList)
+                    {
+                        if (entry.Tag == askedTag)
+                            foundList.Add(entry);
+                    }
+                    break;
+                case 3:
+                    Console.Write("Введите приоритет: ");
+                    int priorChoice = Int32.Parse(Console.ReadLine());
+                    foreach (ToDoEntry entry in toDoList)
+                    {
+                        if (entry.Priority == priorChoice)
+                            foundList.Add(entry);
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            tagDecorator.ShowList(foundList);
+        }
     }
 }
