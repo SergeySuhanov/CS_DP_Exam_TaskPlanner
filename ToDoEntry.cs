@@ -15,7 +15,7 @@ namespace CS_DP_Exam_TaskPlanner
 
         public void EditEntry()
         {
-            Console.WriteLine("\n\tВведите текст запланированной задачи:");
+            Console.WriteLine("\tВведите текст запланированной задачи:");
             Text = Console.ReadLine();
 
             Console.WriteLine("\n\tЗадайте приоритет задачи в числовом формате\n\t(меньше число, выше приоритет):");
@@ -28,20 +28,22 @@ namespace CS_DP_Exam_TaskPlanner
             Console.WriteLine("1 - На работе");
             Console.WriteLine("2 - Домашние дела");
             Console.WriteLine("3 - Хобби");
+            Console.WriteLine("4 - Без тега");
+            Console.Write(" => ");
             int choice = Int32.Parse(Console.ReadLine());
             switch (choice)
             {
                 case 1:
-                    Tag = "Work";
+                    Tag = "Работа";
                     break;
                 case 2:
-                    Tag = "Home";
+                    Tag = "Дом";
                     break;
                 case 3:
-                    Tag = "Hobby";
+                    Tag = "Хобби";
                     break;
                 default:
-                    Tag = "Undefined tag";
+                    Tag = "Без тега";
                     break;
             }
         }
